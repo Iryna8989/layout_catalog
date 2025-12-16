@@ -15,10 +15,26 @@
     font-size: 12px;
     height: v.$nav-height;
     line-height: v.$nav-height;
-    transition: color v.$transition-duration ease;
-  }
+    transition: color v.$transition-duration v.$transition-timing;
 
-  &__link:hover {
-    color: v.$nav-link-hover-color;
+    &--is-active {
+      color: v.$nav-link-hover-color;
+      position: relative;
+    }
+
+    &--is-active::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 4px;
+      background-color: v.$nav-link-hover-color;
+      width: 100%;
+      border-radius: 8px;
+      bottom: 0;
+    }
+
+    &:hover {
+      color: v.$nav-link-hover-color;
+    }
   }
 }
