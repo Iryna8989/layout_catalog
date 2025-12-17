@@ -2,7 +2,7 @@
 
 .catalog {
   padding-block: v.$page-padding;
-  padding-inline: 40px;
+  padding-inline: v.$catalog-padding-inline;
   display: grid;
   grid-template-columns: repeat(1, v.$card-width);
   gap: 46px 48px;
